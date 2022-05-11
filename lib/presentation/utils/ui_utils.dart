@@ -1,0 +1,12 @@
+import 'package:flutter/widgets.dart';
+import 'package:pocket_books/presentation/utils/route_utils.dart';
+
+typedef FutureVoidForHomeScreen = Future<void> Function(BuildContext context);
+
+const popUpMenuHomeScreen = ['Spell Checker', 'Profile', 'Logout'];
+
+Map<String, FutureVoidForHomeScreen> mapHomeScreenMenu = {
+  'Spell Checker': (context) async {
+    Navigator.pushNamed(context, RouteNames.spellChecker);
+  },
+};
