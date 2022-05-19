@@ -7,13 +7,16 @@ class HomeAudioLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Column(
-        children: [
-          HomeAudioCard(title: 'Ngobrolin Startup', author: 'Gus Imre Nagi'),
-          HomeAudioCard(title: 'Ngobrolin Startup', author: 'Gus Imre Nagi'),
-          HomeAudioCard(title: 'Ngobrolin Startup', author: 'Gus Imre Nagi'),
-          HomeAudioCard(title: 'Ngobrolin Startup', author: 'Gus Imre Nagi'),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.all(18),
+        child: Column(
+          children: [
+            HomeAudioCard(title: 'Ngobrolin Startup', author: 'Gus Imre Nagi'),
+            HomeAudioCard(title: 'Ngobrolin Startup', author: 'Gus Imre Nagi'),
+            HomeAudioCard(title: 'Ngobrolin Startup', author: 'Gus Imre Nagi'),
+            HomeAudioCard(title: 'Ngobrolin Startup', author: 'Gus Imre Nagi'),
+          ],
+        ),
       ),
     );
   }
