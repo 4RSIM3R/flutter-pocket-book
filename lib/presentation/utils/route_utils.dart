@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pocket_books/presentation/pages/book/detail_audio_page.dart';
 import 'package:pocket_books/presentation/pages/book/detail_book_page.dart';
 import 'package:pocket_books/presentation/pages/book/listen_book_page.dart';
 import 'package:pocket_books/presentation/pages/book/spell_checker_page.dart';
@@ -20,7 +21,7 @@ class RouteNames {
     home: (object) => const HomePage(),
     spellChecker: (object) => const SpellCheckerPage(),
     detailBook: (object) => const DetailBookPage(),
-    listenBook: (object) => const ListenBookPage(),
+    listenBook: (object) => const DetailAudioPage(),
   };
 
 }
