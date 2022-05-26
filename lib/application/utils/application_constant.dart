@@ -3,3 +3,5 @@ final srtRegex = RegExp(
   caseSensitive: false,
   multiLine: true,
 );
+
+final exampleSound = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3';
