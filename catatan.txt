@@ -1,0 +1,161 @@
+import 'package:community_material_icon/community_material_icon.dart';
+import 'package:flutter/material.dart';
+import 'package:pocket_books/application/book/repositories/parse_srt_repository.dart';
+import 'package:pocket_books/application/subtitle/repositories/subtitle_repository.dart';
+import 'package:speech_to_text/speech_to_text.dart';
+
+class SpellCheckerPage extends StatefulWidget {
+  const SpellCheckerPage({Key? key}) : super(key: key);
+
+  @override
+  State<SpellCheckerPage> createState() => _SpellCheckerPageState();
+}
+
+class _SpellCheckerPageState extends State<SpellCheckerPage> {
+  final speechToText = SpeechToText();
+
+  final parseSRTRepository = ParseSRTRepository();
+  final subtitleRepository = SubtitleRepository();
+
+  int firstIndex = 0;
+  int secondIndex = 1;
+
+  List<String> words = [
+    'We have two converters',
+    'first converts infix to postfix expression',
+    'converts infix to prefix expression'
+  ];
+
+  final ScrollController controller = ScrollController();
+
+  @override
+  void initState() {
+    super.initState();
+    initStt();
+  }
+
+  Future<void> changeText() async {
+    for (var i = 0; i <= words.length; i++) {
+      await Future.delayed(Duration(seconds: 2), () {
+        setState(() {
+          firstIndex = i;
+          secondIndex = i + 1;
+        });
+        controller.animateTo((20.0 * i), duration: Duration(milliseconds: 200), curve: Curves.easeIn);
+      });
+    }
+  }
+
+  Future<void> initStt() async {
+    await speechToText.initialize();
+  }
+
+  Future<void> startListening() async {
+    final locales = await speechToText.locales();
+    await speechToText.listen(
+      localeId: locales[33].localeId,
+      onResult: (result) {
+        print(result.recognizedWords);
+      },
+    );
+  }
+
+  Future<void> stopListening() async {
+    await speechToText.stop();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        elevation: 0,
+        title: Text(
+          'Speech Recognition Challenge',
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        leading: IconButton(
+          onPressed: () {},
+          icon: Icon(
+            CommunityMaterialIcons.comment_question,
+            color: Colors.black,
+          ),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              CommunityMaterialIcons.text_to_speech,
+              color: Colors.black,
+            ),
+          )
+        ],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Center(
+              child: Container(
+                height: 240,
+                child: ListView(
+                  controller: controller,
+                  physics: NeverScrollableScrollPhysics(),
+                  scrollDirection: Axis.vertical,
+                  children: words.asMap().entries.map((e) {
+                    return Text(
+                      e.value,
+                      style: e.key == firstIndex
+                          ? TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.black,
+                            )
+                          : TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.black12,
+                            ),
+                    );
+                  }).toList(),
+                ),
+              ),
+            ),
+            Expanded(child: Container()),
+            Center(
+              child: InkWell(
+                onTap: () {
+                  final result = subtitleRepository.parseSrt(
+                    url: 'https://api.kontenbase.com/upload/file/628cf4cbdb20c52857fb0b75/jVHCcPtB/example.srt',
+                  );
+                },
+                child: Container(
+                  height: 75,
+                  width: 75,
+                  decoration: BoxDecoration(
+                    color: Colors.blueAccent,
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  child: Center(
+                    child: Icon(
+                      Icons.mic,
+                      color: Colors.white,
+                      size: 32,
+                    ),
+                  ),
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}

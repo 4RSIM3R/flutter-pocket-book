@@ -36,7 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   lottie: ^1.2.2
   reactive_forms: ^11.0.1
-  dio: ^4.0.4
+  dio: ^4.0.6
   cached_network_image: ^3.2.0
   google_fonts: ^2.3.1
   flutter_native_splash: ^2.1.1
@@ -48,6 +48,10 @@ dependencies:
   flutter_cached_pdfview: ^0.4.1
   just_audio: ^0.9.21
   just_audio_background: ^0.0.1-beta.5
+  bloc: ^8.0.3
+  flutter_bloc: ^8.0.1
+  shimmer: ^2.0.0
+  quiver: ^3.1.0
 
 flutter_native_splash:
   color: "#ffffff"
@@ -77,7 +81,9 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/
+    - assets/images/
+    - assets/srt/
+    - assets/lottie/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -17,7 +17,7 @@ class HomeAudioCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.pushNamed(context, RouteNames.listenBook);
+        Navigator.pushNamed(context, RouteNames.spellChecker);
       },
       child: Container(
         height: 70,
