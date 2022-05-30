@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pocket_books/presentation/pages/book/detail_audio_page.dart';
 import 'package:pocket_books/presentation/pages/book/detail_book_page.dart';
+import 'package:pocket_books/presentation/pages/book/detail_video_page.dart';
 import 'package:pocket_books/presentation/pages/book/listen_book_page.dart';
 import 'package:pocket_books/presentation/pages/book/spell_checker_page.dart';
 import 'package:pocket_books/presentation/pages/common/splash_page.dart';
@@ -15,6 +16,7 @@ class RouteNames {
   static const spellChecker = '/spell-checker';
   static const detailBook = '/detail-book';
   static const listenBook = '/listen-book';
+  static const detailVideo = '/detail-video';
 
   static Map<String, MapRoutes> maRoutes = {
     splash: (object) => const SplashPage(),
@@ -22,6 +24,7 @@ class RouteNames {
     spellChecker: (object) => const SpellCheckerPage(),
     detailBook: (object) => const DetailBookPage(),
     listenBook: (object) => const DetailAudioPage(),
+    detailVideo: (object) => const DetailVideoPage(),
   };
 
 }

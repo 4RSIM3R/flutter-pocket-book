@@ -5,3 +5,5 @@ final srtRegex = RegExp(
 );
 
 final exampleSound = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3';
+
+final lorem = 'Bangga menjadi bagian dari Politeknik Negeri Malang kita terbentuk didalamnya dengan bimbingan para dosen ahli dan sangat humble kepada mahasiswanya, kali ini SMC Studio berkesempatan untuk mengerjakan Profil Jurusan Teknologi Informasi yang merupakan Jurusan Terbaru dan paling banyak diminati karena di era digital ini banyak lapangan kerja yang membutuhkan tenaga di bidang IT ini.';

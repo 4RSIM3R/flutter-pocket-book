@@ -5,6 +5,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:pocket_books/presentation/components/domain/home/home_book_card.dart';
 import 'package:pocket_books/presentation/layouts/home/home_audio_layout.dart';
 import 'package:pocket_books/presentation/layouts/home/home_book_layout.dart';
+import 'package:pocket_books/presentation/layouts/home/home_video_layout.dart';
 
 import '../../utils/ui_utils.dart';
 
@@ -21,6 +22,7 @@ class _HomePageState extends State<HomePage> {
   final layouts = [
     HomeBookLayout(),
     HomeAudioLayout(),
+    HomeVideoLayout(),
   ];
 
   @override
