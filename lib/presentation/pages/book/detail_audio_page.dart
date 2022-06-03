@@ -198,7 +198,7 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.w600,
-                                    color: payload!.indexOf(e) == currentIndex
+                                    color: payload!.indexOf(e) <= currentIndex
                                         ? Colors.white
                                         : Colors.white.withOpacity(0.5),
                                   ),

@@ -3,16 +3,22 @@ import 'package:flutter/material.dart';
 import 'package:pocket_books/presentation/utils/route_utils.dart';
 
 class HomeBookCard extends StatelessWidget {
-  const HomeBookCard({Key? key, this.title, this.author}) : super(key: key);
+  const HomeBookCard({
+    Key? key,
+    this.title,
+    this.author,
+    this.pdfUrl,
+  }) : super(key: key);
 
   final String? title;
   final String? author;
+  final String? pdfUrl;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.pushNamed(context, RouteNames.detailBook);
+        Navigator.pushNamed(context, RouteNames.detailBook, arguments: pdfUrl);
       },
       child: Container(
         height: 70,

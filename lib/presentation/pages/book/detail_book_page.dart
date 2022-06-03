@@ -2,15 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
 
 class DetailBookPage extends StatelessWidget {
-  const DetailBookPage({Key? key}) : super(key: key);
+  const DetailBookPage({Key? key, this.pdfUrl}) : super(key: key);
+
+  final String? pdfUrl;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PDF(
+      body: const PDF(
         enableSwipe: true,
-        swipeHorizontal: true,
-      ).cachedFromUrl('http://africau.edu/images/default/sample.pdf'),
+        swipeHorizontal: false,
+      ).cachedFromUrl(pdfUrl!),
     );
   }
 }
