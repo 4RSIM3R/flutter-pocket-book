@@ -1,15 +1,25 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:pocket_books/model/video_model.dart';
 import 'package:pocket_books/presentation/utils/route_utils.dart';
 
 class HomeVideoCard extends StatelessWidget {
-  const HomeVideoCard({Key? key}) : super(key: key);
+  const HomeVideoCard({
+    Key? key,
+    this.model,
+  }) : super(key: key);
+
+  final VideoModel? model;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.pushNamed(context, RouteNames.detailVideo);
+        Navigator.pushNamed(
+          context,
+          RouteNames.detailVideo,
+          arguments: model,
+        );
       },
       child: Container(
         margin: EdgeInsets.only(
@@ -22,21 +32,28 @@ class HomeVideoCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           image: DecorationImage(
             image: CachedNetworkImageProvider(
-                'https://www.ipsos.com/sites/default/files/ct/news_and_polls/2021-07/man-at-work-unhappy.jpg'),
+              'https://www.ipsos.com/sites/default/files/ct/news_and_polls/2021-07/man-at-work-unhappy.jpg',
+            ),
             fit: BoxFit.cover,
           ),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Chapter 3', style: TextStyle(color: Colors.white)),
-                Text('05:42', style: TextStyle(color: Colors.white))
-              ],
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //   children: [
+            //     Text('Chapter 3', style: TextStyle(color: Colors.white)),
+            //     Text('05:42', style: TextStyle(color: Colors.white))
+            //   ],
+            // ),
+            Text(
+              model?.videoTitle ?? '-',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600, color: Colors.white),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              softWrap: true,
             ),
-            Text('Office Stuff', style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600, color: Colors.white)),
             Expanded(child: Container()),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -49,7 +66,8 @@ class HomeVideoCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
                       image: CachedNetworkImageProvider(
-                          'https://scontent-cgk1-2.xx.fbcdn.net/v/t1.6435-9/83898456_2716385475109597_947653129061531648_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=174925&_nc_eui2=AeEw-Ccr3kAoHNxMA8FNZHIn3pw8FnCfXUrenDwWcJ9dSidOD_XkSFndj6rE_L_zvfTWPvM_CAocQd0z4s-DUWd-&_nc_ohc=QIWzbeETCZ0AX9j2NcP&_nc_ht=scontent-cgk1-2.xx&oh=00_AT8Qelj2pgNxSWz5HploOICtIkedTmBI142unxEFAWvBxQ&oe=62B904FC'),
+                        'https://i1.rgstatic.net/ii/profile.image/715140370542594-1547514159610_Q512/Farida-Ulfa.jpg',
+                      ),
                       fit: BoxFit.cover,
                     ),
                   ),
