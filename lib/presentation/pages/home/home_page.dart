@@ -49,6 +49,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.white,
         elevation: 0,
         automaticallyImplyLeading: false,
+        leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu, color: Colors.black)),
         title: Text('Pocket Book', style: TextStyle(color: Colors.black)),
         centerTitle: true,
         actions: [

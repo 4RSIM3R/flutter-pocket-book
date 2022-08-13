@@ -8,10 +8,12 @@ class HomeAudioCard extends StatelessWidget {
     Key? key,
     this.title,
     this.author,
+    this.image,
   }) : super(key: key);
 
   final String? title;
   final String? author;
+  final String? image;
 
   @override
   Widget build(BuildContext context) {
@@ -20,21 +22,20 @@ class HomeAudioCard extends StatelessWidget {
         Navigator.pushNamed(context, RouteNames.listenBook);
       },
       child: Container(
-        height: 70,
         margin: const EdgeInsets.only(
-          bottom: 12,
+          bottom: 16,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
-              height: 65,
-              width: 50,
+              height: 80,
+              width: 80,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
-                image: const DecorationImage(
+                borderRadius: BorderRadius.circular(10),
+                image: DecorationImage(
                   image: CachedNetworkImageProvider(
-                    'https://imgv2-2-f.scribdassets.com/img/word_document/332828142/original/216x287/2855e2ff9d/1617230868?v=1',
+                    image!,
                   ),
                   fit: BoxFit.cover,
                 ),
@@ -48,14 +49,15 @@ class HomeAudioCard extends StatelessWidget {
                 children: [
                   Text(
                     title ?? '',
-                    style: const TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.w500),
+                    style: const TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.w600),
                     overflow: TextOverflow.visible,
                     maxLines: 2,
                     softWrap: false,
                   ),
+                  SizedBox(height: 4),
                   Text(
                     author ?? '',
-                    style: TextStyle(color: Colors.grey[500]),
+                    style: TextStyle(color: Colors.grey[500], fontSize: 14),
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
                     softWrap: false,
