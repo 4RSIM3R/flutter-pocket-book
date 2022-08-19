@@ -1,25 +1,26 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:pocket_books/model/audio_model.dart';
 
 import '../../../utils/route_utils.dart';
 
 class HomeAudioCard extends StatelessWidget {
   const HomeAudioCard({
     Key? key,
-    this.title,
-    this.author,
-    this.image,
+    required this.model,
   }) : super(key: key);
 
-  final String? title;
-  final String? author;
-  final String? image;
+  final AudioModel model;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.pushNamed(context, RouteNames.listenBook);
+        Navigator.pushNamed(
+          context,
+          RouteNames.listenBook,
+          arguments: model,
+        );
       },
       child: Container(
         margin: const EdgeInsets.only(
@@ -35,7 +36,7 @@ class HomeAudioCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
                 image: DecorationImage(
                   image: CachedNetworkImageProvider(
-                    image!,
+                    model.thumbnailUrl,
                   ),
                   fit: BoxFit.cover,
                 ),
@@ -48,7 +49,7 @@ class HomeAudioCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    title ?? '',
+                    model.title,
                     style: const TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.w600),
                     overflow: TextOverflow.visible,
                     maxLines: 2,
@@ -56,7 +57,7 @@ class HomeAudioCard extends StatelessWidget {
                   ),
                   SizedBox(height: 4),
                   Text(
-                    author ?? '',
+                    'Mrs Farida Ulfa',
                     style: TextStyle(color: Colors.grey[500], fontSize: 14),
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
@@ -65,15 +66,6 @@ class HomeAudioCard extends StatelessWidget {
                 ],
               ),
             ),
-            // const SizedBox(width: 8),
-            // PopupMenuButton(
-            //   itemBuilder: (_) => const <PopupMenuItem<String>>[
-            //     PopupMenuItem<String>(child: Text('Read'), value: 'Read'),
-            //     PopupMenuItem<String>(child: Text('Download'), value: 'Download'),
-            //   ],
-            //   child: const Icon(Icons.more_vert),
-            //   onSelected: (value) {},
-            // )
           ],
         ),
       ),

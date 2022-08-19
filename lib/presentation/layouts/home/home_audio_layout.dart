@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pocket_books/presentation/components/domain/home/home_audio_card.dart';
 
+import '../../../model/audio_model.dart';
+
 class HomeAudioLayout extends StatelessWidget {
   const HomeAudioLayout({Key? key}) : super(key: key);
 
@@ -18,24 +20,12 @@ class HomeAudioLayout extends StatelessWidget {
             ),
             SizedBox(height: 12),
             HomeAudioCard(
-              title: 'The 100 trillionth digit of pi',
-              author: 'Google Cloud Platform',
-              image: 'https://cloud.google.com/podcasts/images/gcp-podcast-thumbnail.jpg',
-            ),
-            HomeAudioCard(
-              title: 'Network Agility for the Cloud Era',
-              author: 'Screaming In The Cloud',
-              image: 'https://cdns-images.dzcdn.net/images/talk/9f0d591eb65b9a111ea02c269b52ca8b/1000x1000.jpg',
-            ),
-            HomeAudioCard(
-              title: 'The 100 trillionth digit of pi',
-              author: 'Google Cloud Platform',
-              image: 'https://cloud.google.com/podcasts/images/gcp-podcast-thumbnail.jpg',
-            ),
-            HomeAudioCard(
-              title: 'The 100 trillionth digit of pi',
-              author: 'Google Cloud Platform',
-              image: 'https://cloud.google.com/podcasts/images/gcp-podcast-thumbnail.jpg',
+              model: AudioModel(
+                'https://is3.cloudhost.id/beceran-dev-nti/coba/GreatIdiomsExpressionsforNegotiations.mp3',
+                'https://is3.cloudhost.id/beceran-dev-nti/coba/GreatIdiomsExpressionsforNegotiations.srt',
+                'Expression Of Negotiations',
+                'https://www.incimages.com/uploaded_files/image/1920x1080/shutterstock_645246526_351270.jpg'
+              ),
             ),
           ],
         ),

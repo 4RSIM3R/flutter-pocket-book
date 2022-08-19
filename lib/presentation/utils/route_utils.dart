@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pocket_books/model/audio_model.dart';
 import 'package:pocket_books/model/video_model.dart';
 import 'package:pocket_books/presentation/pages/book/detail_audio_page.dart';
 import 'package:pocket_books/presentation/pages/book/detail_book_page.dart';
@@ -26,7 +27,10 @@ class RouteNames {
       final url = (object as String?);
       return DetailBookPage(pdfUrl: url);
     },
-    listenBook: (object) => const DetailAudioPage(),
+    listenBook: (object) {
+      final model = (object as AudioModel);
+      return DetailAudioPage(model: model);
+    },
     detailVideo: (object) {
       final model = (object as VideoModel?);
       return DetailVideoPage(model: model);

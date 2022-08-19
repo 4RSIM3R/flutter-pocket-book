@@ -25,7 +25,7 @@ class _SpellCheckerPageState extends State<SpellCheckerPage> {
   @override
   void initState() {
     super.initState();
-    bloc.loadSubtitle();
+    // bloc.loadSubtitle();
   }
 
   Future playSubtitle(List<SubtitleModels> models) async {
@@ -43,12 +43,6 @@ class _SpellCheckerPageState extends State<SpellCheckerPage> {
       });
       controller.animateTo((15.0 * currentIndex), duration: Duration(milliseconds: 250), curve: Curves.ease);
     }
-    // while (currentIndex < list.length) {
-    //   final diff = list[currentIndex].endTime - list[currentIndex].startTime;
-
-    //   print(diff);
-
-    // }
   }
 
   @override

@@ -25,18 +25,14 @@ class SubtitleBloc extends Cubit<SubtitleState> {
 
   final subtitleRepository = SubtitleRepository();
 
-  Future<void> loadSubtitle() async {
+  Future<void> loadSubtitle(String url) async {
     emit(SubtitleLoading());
 
     try {
-      final result = await subtitleRepository.parseSrt(
-          url: 'https://api.kontenbase.com/upload/file/628cf4cbdb20c52857fb0b75/jVHCcPtB/example.srt');
+      final result = await subtitleRepository.parseSrt(url: url);
       emit(SubtitleSuccess(result));
     } catch (e) {
       emit(SubtitleFailure(e.toString()));
     }
   }
-
-  
-
 }
