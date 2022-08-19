@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lottie/lottie.dart';
 import 'package:pocket_books/application/subtitle/bloc/subtitle_bloc.dart';
-import 'package:quiver/async.dart';
 import 'package:shimmer/shimmer.dart';
 
 import '../../../application/subtitle/model/subtitle_model.dart';
