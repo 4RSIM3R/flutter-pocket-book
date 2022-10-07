@@ -15,7 +15,7 @@ class HomeAudioLayout extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Audio Books',
+              'Audio Pratices',
               style: TextStyle(fontSize: 21, fontWeight: FontWeight.w600),
             ),
             SizedBox(height: 12),

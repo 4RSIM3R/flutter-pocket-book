@@ -66,7 +66,7 @@ class HomeVideoCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
                       image: CachedNetworkImageProvider(
-                        'https://i1.rgstatic.net/ii/profile.image/715140370542594-1547514159610_Q512/Farida-Ulfa.jpg',
+                        'https://psdkukediri.polinema.ac.id/wp-content/uploads/2020/06/LOGO-POLINEMA-transparent-3.png',
                       ),
                       fit: BoxFit.cover,
                     ),
@@ -76,8 +76,8 @@ class HomeVideoCard extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Mrs Farida', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
-                    Text('English Lecture', style: TextStyle(color: Colors.white)),
+                    Text('English Lecture Team', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
+                    Text('State Polytechnic Malang', style: TextStyle(color: Colors.white)),
                   ],
                 )
               ],

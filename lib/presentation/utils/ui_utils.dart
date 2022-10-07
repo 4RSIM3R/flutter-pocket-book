@@ -10,3 +10,6 @@ Map<String, FutureVoidForHomeScreen> mapHomeScreenMenu = {
     Navigator.pushNamed(context, RouteNames.spellChecker);
   },
 };
+
+const lorem =
+    'Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an';

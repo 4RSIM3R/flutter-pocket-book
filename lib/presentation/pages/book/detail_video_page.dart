@@ -115,7 +115,7 @@ class _DetailVideoPageState extends State<DetailVideoPage> {
                                   borderRadius: BorderRadius.circular(20),
                                   image: DecorationImage(
                                     image: CachedNetworkImageProvider(
-                                      'https://i1.rgstatic.net/ii/profile.image/715140370542594-1547514159610_Q512/Farida-Ulfa.jpg',
+                                      'https://img.freepik.com/free-vector/digital-presentation-abstract-illustration_335657-4996.jpg',
                                     ),
                                     fit: BoxFit.cover,
                                   ),
@@ -142,8 +142,8 @@ class _DetailVideoPageState extends State<DetailVideoPage> {
                 ),
                 widget.model!.questionLink.isNotEmpty
                     ? Padding(
-                      padding: const EdgeInsets.all(18),
-                      child: InkWell(
+                        padding: const EdgeInsets.all(18),
+                        child: InkWell(
                           onTap: () async {
                             if (!await launchUrl(Uri.parse(widget.model!.questionLink))) {
                               throw 'Could not launch url';
@@ -158,7 +158,7 @@ class _DetailVideoPageState extends State<DetailVideoPage> {
                             ),
                             child: Center(
                               child: Text(
-                                'Open Questionere',
+                                'Follow Up Question',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 14,
@@ -168,7 +168,7 @@ class _DetailVideoPageState extends State<DetailVideoPage> {
                             ),
                           ),
                         ),
-                    )
+                      )
                     : Container()
               ],
             ),

@@ -14,7 +14,7 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     super.initState();
     Future.delayed(const Duration(milliseconds: 750)).then((value) {
-      Navigator.pushNamed(context, RouteNames.home);
+      Navigator.pushNamed(context, RouteNames.onboarding);
     });
   }
 

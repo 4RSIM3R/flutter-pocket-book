@@ -6,21 +6,27 @@ import 'package:pocket_books/presentation/pages/book/detail_book_page.dart';
 import 'package:pocket_books/presentation/pages/book/detail_video_page.dart';
 import 'package:pocket_books/presentation/pages/book/listen_book_page.dart';
 import 'package:pocket_books/presentation/pages/book/spell_checker_page.dart';
+import 'package:pocket_books/presentation/pages/common/onboarding_page.dart';
 import 'package:pocket_books/presentation/pages/common/splash_page.dart';
 import 'package:pocket_books/presentation/pages/home/home_page.dart';
+
+import '../pages/common/about_us_page.dart';
 
 typedef MapRoutes = Widget Function(Object? object);
 
 class RouteNames {
   static const splash = '/';
+  static const onboarding = '/onboarding';
   static const home = '/home';
   static const spellChecker = '/spell-checker';
   static const detailBook = '/detail-book';
   static const listenBook = '/listen-book';
   static const detailVideo = '/detail-video';
+  static const aboutUs = '/about-us';
 
   static Map<String, MapRoutes> maRoutes = {
     splash: (object) => const SplashPage(),
+    onboarding: (object) => const OnboardingPage(),
     home: (object) => const HomePage(),
     spellChecker: (object) => const SpellCheckerPage(),
     detailBook: (object) {
@@ -35,6 +41,7 @@ class RouteNames {
       final model = (object as VideoModel?);
       return DetailVideoPage(model: model);
     },
+    aboutUs: (args) => const AboutUsPage(),
   };
 }
 

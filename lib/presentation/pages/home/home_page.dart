@@ -6,6 +6,7 @@ import 'package:pocket_books/presentation/components/domain/home/home_book_card.
 import 'package:pocket_books/presentation/layouts/home/home_audio_layout.dart';
 import 'package:pocket_books/presentation/layouts/home/home_book_layout.dart';
 import 'package:pocket_books/presentation/layouts/home/home_video_layout.dart';
+import 'package:pocket_books/presentation/utils/route_utils.dart';
 
 import '../../utils/ui_utils.dart';
 
@@ -25,36 +26,74 @@ class _HomePageState extends State<HomePage> {
     HomeVideoLayout(),
   ];
 
+  final _key = GlobalKey<ScaffoldState>();
+
   @override
   void initState() {
     super.initState();
-    askPermission();
+    // askPermission();
   }
 
-  Future<void> askPermission() async {
-    Map<Permission, PermissionStatus> statuses = await [
-      Permission.microphone,
-      Permission.bluetooth,
-    ].request();
-    if (kDebugMode) {
-      print(statuses[Permission.microphone]);
-    }
-  }
+  // Future<void> askPermission() async {
+  //   Map<Permission, PermissionStatus> statuses = await [
+  //     Permission.microphone,
+  //     Permission.bluetooth,
+  //   ].request();
+  //   if (kDebugMode) {
+  //     print(statuses[Permission.microphone]);
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _key,
       backgroundColor: Colors.white,
+      drawer: Drawer(
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+              vertical: 18,
+              horizontal: 12,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, RouteNames.aboutUs);
+                  },
+                  child: Row(
+                    children: [
+                      Icon(CupertinoIcons.info_circle),
+                      SizedBox(width: 12),
+                      Text(
+                        'About Us',
+                        style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
         automaticallyImplyLeading: false,
-        leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu, color: Colors.black)),
-        title: Text('Pocket Book', style: TextStyle(color: Colors.black)),
+        leading: IconButton(
+          onPressed: () {
+            _key.currentState!.openDrawer();
+          },
+          icon: Icon(Icons.menu, color: Colors.black),
+        ),
+        title: Text(
+          'Pocket Book',
+          style: TextStyle(color: Colors.black),
+        ),
         centerTitle: true,
-        actions: [
-          IconButton(onPressed: () {}, icon: Icon(CupertinoIcons.search, color: Colors.black)),
-        ],
       ),
       body: layouts[currentPage],
       bottomNavigationBar: BottomNavigationBar(
