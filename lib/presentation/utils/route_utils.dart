@@ -5,6 +5,7 @@ import 'package:pocket_books/presentation/pages/book/detail_audio_page.dart';
 import 'package:pocket_books/presentation/pages/book/detail_book_page.dart';
 import 'package:pocket_books/presentation/pages/book/detail_video_page.dart';
 import 'package:pocket_books/presentation/pages/book/listen_book_page.dart';
+import 'package:pocket_books/presentation/pages/book/menu_audio_page.dart';
 import 'package:pocket_books/presentation/pages/book/spell_checker_page.dart';
 import 'package:pocket_books/presentation/pages/common/onboarding_page.dart';
 import 'package:pocket_books/presentation/pages/common/splash_page.dart';
@@ -23,6 +24,7 @@ class RouteNames {
   static const listenBook = '/listen-book';
   static const detailVideo = '/detail-video';
   static const aboutUs = '/about-us';
+  static const menuAudio = '/menu-audio';
 
   static Map<String, MapRoutes> maRoutes = {
     splash: (object) => const SplashPage(),
@@ -42,6 +44,7 @@ class RouteNames {
       return DetailVideoPage(model: model);
     },
     aboutUs: (args) => const AboutUsPage(),
+    menuAudio: (args) => MenuAudioPage(payload: (args as List<Map<String, dynamic>>?) ?? []),
   };
 }
 

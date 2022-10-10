@@ -8,20 +8,16 @@ class HomeAudioCard extends StatelessWidget {
   const HomeAudioCard({
     Key? key,
     required this.model,
+    required this.onTap,
   }) : super(key: key);
 
   final AudioModel model;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        Navigator.pushNamed(
-          context,
-          RouteNames.listenBook,
-          arguments: model,
-        );
-      },
+      onTap: onTap,
       child: Container(
         margin: const EdgeInsets.only(
           bottom: 16,
@@ -57,7 +53,7 @@ class HomeAudioCard extends StatelessWidget {
                   ),
                   SizedBox(height: 4),
                   Text(
-                    'Mrs Farida Ulfa',
+                    'English Lecture Team State Polytechnic Malang',
                     style: TextStyle(color: Colors.grey[500], fontSize: 14),
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,

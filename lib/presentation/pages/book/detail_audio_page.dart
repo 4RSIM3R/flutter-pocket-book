@@ -130,7 +130,9 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
             backgroundColor: Colors.white,
             elevation: 0,
             leading: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context);
+              },
               icon: Icon(Icons.arrow_back, color: Colors.black),
             ),
             title: Text(widget.model.title, style: TextStyle(color: Colors.black)),
@@ -258,10 +260,6 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
                       Text(
                         widget.model.title,
                         style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
-                      ),
-                      Text(
-                        'Chapter 3',
-                        style: TextStyle(color: Colors.grey[400], fontWeight: FontWeight.w600, fontSize: 14),
                       ),
                       SizedBox(height: 24),
                       ValueListenableBuilder<ProgressBarState>(
