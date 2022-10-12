@@ -201,23 +201,25 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
                           ),
                         );
                       } else if (state.runtimeType == SubtitleFailure) {
-                        return Container(
-                          height: MediaQuery.of(context).size.height / 3,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              LottieBuilder.network(
-                                'https://assets8.lottiefiles.com/packages/lf20_bhw1ul4g.json',
-                                height: 225,
-                                width: 225,
-                                fit: BoxFit.cover,
-                              ),
-                              SizedBox(height: 12),
-                              Text(
-                                'Error Message Here',
-                                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-                              )
-                            ],
+                        return Center(
+                          child: Container(
+                            height: MediaQuery.of(context).size.height / 3,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                LottieBuilder.network(
+                                  'https://assets8.lottiefiles.com/packages/lf20_bhw1ul4g.json',
+                                  height: 225,
+                                  width: 225,
+                                  fit: BoxFit.cover,
+                                ),
+                                SizedBox(height: 12),
+                                Text(
+                                  'Error Message Here',
+                                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                                )
+                              ],
+                            ),
                           ),
                         );
                       } else {

@@ -31,6 +31,12 @@ class _DetailVideoPageState extends State<DetailVideoPage> {
   }
 
   @override
+  void dispose() {
+    controller!.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return OrientationBuilder(
       builder: (context, orientation) {
@@ -56,7 +62,9 @@ class _DetailVideoPageState extends State<DetailVideoPage> {
             appBar: AppBar(
               backgroundColor: Colors.white,
               elevation: 0,
-              leading: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back, color: Colors.black)),
+              leading: IconButton(onPressed: () {
+                Navigator.pop(context);
+              }, icon: Icon(Icons.arrow_back, color: Colors.black)),
               title: Text(widget.model?.videoTitle ?? '-', style: TextStyle(color: Colors.black)),
               centerTitle: true,
             ),
@@ -89,7 +97,7 @@ class _DetailVideoPageState extends State<DetailVideoPage> {
                             children: [
                               Expanded(
                                 child: Text(
-                                  widget.model?.videoDescription ?? '-',
+                                  widget.model?.videoTitle ?? '-',
                                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
@@ -125,8 +133,8 @@ class _DetailVideoPageState extends State<DetailVideoPage> {
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text('Mrs Farida', style: TextStyle(fontWeight: FontWeight.w600)),
-                                  Text('English Lecture'),
+                                  Text('English Lecture Team', style: TextStyle(fontWeight: FontWeight.w600)),
+                                  Text('State Polytechnic Malang'),
                                 ],
                               )
                             ],
@@ -134,7 +142,6 @@ class _DetailVideoPageState extends State<DetailVideoPage> {
                           Divider(color: Colors.grey[400]),
                           SizedBox(height: 8),
                           Text(widget.model?.videoDescription ?? '-'),
-                          // Expanded(child: Container()),
                         ],
                       ),
                     ),

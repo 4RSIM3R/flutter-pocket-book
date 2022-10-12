@@ -16,6 +16,18 @@ class _OnboardingPageState extends State<OnboardingPage> {
     'assets/images/webinar.png',
   ];
 
+  final _title = [
+    'Business Meeting',
+    'New Things You Can Learn',
+    'Enriching Your Knowledge',
+  ];
+
+  final _subtitle = [
+    'Business Meeting Presentation in A Nutshell is built to assist you in getting the gist on how to do a Business Meeting.',
+    'Go to the” WebQuest” and find out more about new things you can learn and help you gain more confident in practicing the oral communication skills for business meeting in real-life.',
+    'All materials are well-thought and tailor made for enriching your knowledge.',
+  ];
+
   final _controller = PageController();
 
   int _current = 0;
@@ -54,12 +66,12 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     ),
                     SizedBox(height: 12),
                     Text(
-                      'Insert Title Here...',
+                      _title[i],
                       style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
                     ),
                     SizedBox(height: 12),
                     Text(
-                      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+                      _subtitle[i],
                       style: TextStyle(
                         fontSize: 16,
                         color: Colors.grey,
@@ -79,12 +91,12 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         .map((e) => AnimatedContainer(
                               duration: Duration(milliseconds: 500),
                               height: 15,
-                              width: e == _images[_current] ?  45 : 15,
+                              width: e == _images[_current] ? 45 : 15,
                               margin: EdgeInsets.only(
                                 right: 8,
                               ),
                               decoration: BoxDecoration(
-                                color:  e == _images[_current] ? Colors.blue : Colors.grey[300],
+                                color: e == _images[_current] ? Colors.blue : Colors.grey[300],
                                 borderRadius: BorderRadius.circular(10),
                               ),
                             ))

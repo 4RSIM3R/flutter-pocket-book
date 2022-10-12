@@ -41,7 +41,7 @@ dependencies:
   google_fonts: ^2.3.1
   flutter_native_splash: ^2.1.1
   # permission_handler: ^9.2.0
-  marquee: ^2.2.1
+  # marquee: ^2.2.1
   community_material_icon: ^5.9.55
   flutter_cached_pdfview: ^0.4.1
   just_audio: ^0.9.21

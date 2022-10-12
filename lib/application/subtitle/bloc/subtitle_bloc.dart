@@ -29,9 +29,10 @@ class SubtitleBloc extends Cubit<SubtitleState> {
     emit(SubtitleLoading());
 
     try {
-      final result = await subtitleRepository.parseSrt(url: url);
+      final result = await subtitleRepository.parseSrt(url: url.trim());
       emit(SubtitleSuccess(result));
     } catch (e) {
+      print(e.toString());
       emit(SubtitleFailure(e.toString()));
     }
   }

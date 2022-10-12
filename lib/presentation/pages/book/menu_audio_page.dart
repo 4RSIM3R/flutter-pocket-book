@@ -39,8 +39,8 @@ class MenuAudioPage extends StatelessWidget {
                 .map(
                   (e) => HomeAudioCard(
                     model: AudioModel(
-                      'https://is3.cloudhost.id/beceran-dev-nti/coba/GreatIdiomsExpressionsforNegotiations.mp3',
-                      'https://is3.cloudhost.id/beceran-dev-nti/coba/GreatIdiomsExpressionsforNegotiations.srt',
+                      e['audio_url'],
+                      e['srt'],
                       e['title'],
                       e['image'],
                     ),
