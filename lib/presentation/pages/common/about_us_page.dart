@@ -43,26 +43,12 @@ class AboutUsPage extends StatelessWidget {
               ),
               SizedBox(height: 12),
               Text(
-                lorem,
+                about,
                 style: TextStyle(
                   color: Colors.grey,
                 ),
               ),
               SizedBox(height: 12),
-              Text(
-                'Another Title',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              SizedBox(height: 12),
-              Text(
-                lorem,
-                style: TextStyle(
-                  color: Colors.grey,
-                ),
-              ),
               SizedBox(height: 12),
               Text(
                 'The Team',
@@ -77,14 +63,14 @@ class AboutUsPage extends StatelessWidget {
                   Expanded(
                     child: Container(
                       width: double.infinity,
-                      height: 175,
+                      height: 200,
                       padding: EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(5),
                         image: DecorationImage(
                           image: CachedNetworkImageProvider(
-                            'https://img.freepik.com/free-photo/aerial-view-business-team_53876-124515.jpg',
+                            'https://is3.cloudhost.id/beceran-dev-nti/coba/farida_ulfa.jpg',
                           ),
                           fit: BoxFit.cover,
                         ),
@@ -105,14 +91,14 @@ class AboutUsPage extends StatelessWidget {
                   Expanded(
                     child: Container(
                       width: double.infinity,
-                      height: 175,
+                      height: 200,
                       padding: EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(5),
                         image: DecorationImage(
                           image: CachedNetworkImageProvider(
-                            'https://img.freepik.com/free-photo/aerial-view-business-team_53876-124515.jpg',
+                            'https://is3.cloudhost.id/beceran-dev-nti/coba/lia_agustina.jpeg',
                           ),
                           fit: BoxFit.cover,
                         ),
@@ -122,7 +108,35 @@ class AboutUsPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Text(
-                            'MRS Lia',
+                            'MRS Lia Agustina',
+                            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 12),
+                  Expanded(
+                    child: Container(
+                      width: double.infinity,
+                      height: 200,
+                      padding: EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(5),
+                        image: DecorationImage(
+                          image: CachedNetworkImageProvider(
+                            'https://is3.cloudhost.id/beceran-dev-nti/coba/futuh_handoyo.jpg',
+                          ),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            'MR Futuh Handoyo',
                             style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
                           )
                         ],
@@ -137,14 +151,14 @@ class AboutUsPage extends StatelessWidget {
                   Expanded(
                     child: Container(
                       width: double.infinity,
-                      height: 125,
+                      height: 200,
                       padding: EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(5),
                         image: DecorationImage(
                           image: CachedNetworkImageProvider(
-                            'https://img.freepik.com/free-photo/aerial-view-business-team_53876-124515.jpg',
+                            'https://is3.cloudhost.id/beceran-dev-nti/coba/haikal.JPG',
                           ),
                           fit: BoxFit.cover,
                         ),
@@ -165,14 +179,14 @@ class AboutUsPage extends StatelessWidget {
                   Expanded(
                     child: Container(
                       width: double.infinity,
-                      height: 125,
+                      height: 200,
                       padding: EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(5),
                         image: DecorationImage(
                           image: CachedNetworkImageProvider(
-                            'https://img.freepik.com/free-photo/aerial-view-business-team_53876-124515.jpg',
+                            'https://is3.cloudhost.id/beceran-dev-nti/coba/intan.jpg',
                           ),
                           fit: BoxFit.cover,
                         ),
@@ -193,14 +207,14 @@ class AboutUsPage extends StatelessWidget {
                   Expanded(
                     child: Container(
                       width: double.infinity,
-                      height: 125,
+                      height: 200,
                       padding: EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(5),
                         image: DecorationImage(
                           image: CachedNetworkImageProvider(
-                            'https://img.freepik.com/free-photo/aerial-view-business-team_53876-124515.jpg',
+                            'https://st2.depositphotos.com/4196725/6756/i/600/depositphotos_67569001-stock-photo-black-wrinkled-paper-texture.jpg',
                           ),
                           fit: BoxFit.cover,
                         ),

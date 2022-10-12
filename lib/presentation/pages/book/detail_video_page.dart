@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:pocket_books/application/utils/application_constant.dart';
 import 'package:pocket_books/model/video_model.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -62,9 +63,11 @@ class _DetailVideoPageState extends State<DetailVideoPage> {
             appBar: AppBar(
               backgroundColor: Colors.white,
               elevation: 0,
-              leading: IconButton(onPressed: () {
-                Navigator.pop(context);
-              }, icon: Icon(Icons.arrow_back, color: Colors.black)),
+              leading: IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: Icon(Icons.arrow_back, color: Colors.black)),
               title: Text(widget.model?.videoTitle ?? '-', style: TextStyle(color: Colors.black)),
               centerTitle: true,
             ),
@@ -105,7 +108,9 @@ class _DetailVideoPageState extends State<DetailVideoPage> {
                                 ),
                               ),
                               IconButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Share.share(widget.model!.videoUrl);
+                                },
                                 icon: Icon(Icons.share),
                               )
                             ],

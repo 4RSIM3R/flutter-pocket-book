@@ -110,3 +110,6 @@ final audios = {
     },
   ],
 };
+
+const about =
+    "This digital pocket book is developed for the purpose of completing research in developing a digital pocket book for businessmeeting purpose. Both book and the application have been validated to meet the criteria of exxelence for students and also teacher use. The writers of the book are faculty members of Politeknik Negeri Malang with years of service, trainings, research and experiences in the teaching and learning of ESP in tertiary level, also in materials development and translations";
