@@ -39,6 +39,12 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
     listenPlayButtonState();
   }
 
+  @override
+  void dispose() {
+    audioPlayer.dispose();
+    super.dispose();
+  }
+
   Future<void> initAudioPlayer() async {
     await audioPlayer.setUrl(widget.model.audioUrl);
   }

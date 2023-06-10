@@ -4,9 +4,9 @@ final srtRegex = RegExp(
   multiLine: true,
 );
 
-final exampleSound = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3';
+const exampleSound = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3';
 
-final lorem =
+const lorem =
     'Bangga menjadi bagian dari Politeknik Negeri Malang kita terbentuk didalamnya dengan bimbingan para dosen ahli dan sangat humble kepada mahasiswanya, kali ini SMC Studio berkesempatan untuk mengerjakan Profil Jurusan Teknologi Informasi yang merupakan Jurusan Terbaru dan paling banyak diminati karena di era digital ini banyak lapangan kerja yang membutuhkan tenaga di bidang IT ini.';
 
 final listBook = [
@@ -33,7 +33,7 @@ final listBook = [
 ];
 
 final audios = {
-  "Great Idioms Expressions\nfor Negotiations": [
+  "Great Idioms Expressions for Negotiations": [
     {
       "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/GreatIdiomsExpressionsForNegotiations-1.mp3",
       "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/GreatIdiomsExpressionsForNegotiations-1.srt",
@@ -65,46 +65,146 @@ final audios = {
       "image": "https://www.incimages.com/uploaded_files/image/1920x1080/shutterstock_645246526_351270.jpg",
     },
   ],
-  "How To Be More Diplomatic\n& Polite": [
+  "How To Be More Diplomatic & Polite": [
     {
-      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-1.mp3",
-      "srt": " https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-1.srt",
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-1-fix.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-1-fix.srt",
       "title": "Part 1",
       "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
     },
     {
-      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-2.mp3",
-      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-2.srt",
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-2-fix.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-2-fix.srt",
       "title": "Part 2",
       "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
     },
     {
-      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-3.mp3",
-      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-3.srt",
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-3-fix.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-3-fix.srt",
       "title": "Part 3",
       "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
     },
     {
-      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-4.mp3",
-      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-4.srt",
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-4-fix.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-4-fix.srt",
       "title": "Part 4",
       "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
     },
     {
-      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-5.mp3",
-      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-5.srt",
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-5-fix.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-5-fix.srt",
       "title": "Part 5",
       "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
     },
     {
-      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-5.mp3",
-      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-5.srt",
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-6-fix.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-6-fix.srt",
+      "title": "Part 6",
+      "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
+    },
+  ],
+  "Phrases For Leading a Business Meeting": [
+    {
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/f5a1.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/f5a1.srt",
+      "title": "Part 1",
+      "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
+    },
+    {
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/f5a2.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/f5a2.srt",
+      "title": "Part 2",
+      "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
+    },
+    {
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/f5a3.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/f5a3.srt",
+      "title": "Part 3",
+      "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
+    },
+    {
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/f5a4.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/f5a4.srt",
+      "title": "Part 4",
+      "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
+    },
+    {
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/f5a5.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/f5a5.srt",
       "title": "Part 5",
       "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
     },
     {
-      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-6.mp3",
-      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/HowToBeMoreDiplomaticPolite-6.srt",
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/f5a6.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/f5a6.srt",
+      "title": "Part 6",
+      "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
+    },
+    {
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/f5a7.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/f5a7.srt",
+      "title": "Part 7",
+      "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
+    },
+    {
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/f5a8.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/f5a8.srt",
+      "title": "Part 8",
+      "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
+    },
+    {
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/f5a10.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/f5a10.srt",
+      "title": "Part 10",
+      "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
+    },
+    {
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/f5a11.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/f5a11.srt",
+      "title": "Part 11",
+      "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
+    },
+    {
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/f5a12.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/f5a12.srt",
+      "title": "Part 12",
+      "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
+    },
+  ],
+  "Must-Have English Phrases for Online Meetings": [
+    {
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/f6a1.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/f6a1.srt",
+      "title": "Part 1",
+      "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
+    },
+    {
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/f6a2.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/f6a2.srt",
+      "title": "Part 2",
+      "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
+    },
+    {
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/f6a3.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/f6a3.srt",
+      "title": "Part 3",
+      "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
+    },
+    {
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/f6a4.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/f6a4.srt",
+      "title": "Part 4",
+      "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
+    },
+    {
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/f6a5.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/f6a5.srt",
+      "title": "Part 5",
+      "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
+    },
+    {
+      "audio_url": "https://is3.cloudhost.id/beceran-dev-nti/coba/f6a6.mp3",
+      "srt": "https://is3.cloudhost.id/beceran-dev-nti/coba/f6a6.srt",
       "title": "Part 6",
       "image": "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
     },

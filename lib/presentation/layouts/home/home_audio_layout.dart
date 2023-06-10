@@ -14,9 +14,13 @@ class HomeAudioLayout extends StatefulWidget {
 
 class _HomeAudioLayoutState extends State<HomeAudioLayout> {
   final mapImages = {
-    "Great Idioms Expressions\nfor Negotiations":
+    "Great Idioms Expressions for Negotiations":
         "https://www.incimages.com/uploaded_files/image/1920x1080/shutterstock_645246526_351270.jpg",
-    "How To Be More Diplomatic\n& Polite":
+    "How To Be More Diplomatic & Polite":
+        "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
+    "Phrases For Leading a Business Meeting":
+        "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
+    "Must-Have English Phrases for Online Meetings":
         "https://img.freepik.com/free-vector/group-therapy-illustration_74855-5516.jpg",
   };
 
@@ -28,11 +32,11 @@ class _HomeAudioLayoutState extends State<HomeAudioLayout> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               'Audio Pratices',
               style: TextStyle(fontSize: 21, fontWeight: FontWeight.w600),
             ),
-            SizedBox(height: 12),
+            const SizedBox(height: 12),
             Column(
               children: audios.keys
                   .map(

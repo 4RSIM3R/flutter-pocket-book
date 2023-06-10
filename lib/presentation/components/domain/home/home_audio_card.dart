@@ -44,12 +44,15 @@ class HomeAudioCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    model.title,
-                    style: const TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.w600),
-                    overflow: TextOverflow.visible,
-                    maxLines: 2,
-                    softWrap: false,
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          model.title,
+                          style: const TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    ],
                   ),
                   SizedBox(height: 4),
                   Text(

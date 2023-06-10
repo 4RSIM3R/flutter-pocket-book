@@ -1,10 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:pocket_books/application/utils/application_constant.dart';
 import 'package:pocket_books/presentation/utils/route_utils.dart';
-
-import '../../components/domain/home/home_book_card.dart';
 
 class HomeBookLayout extends StatefulWidget {
   const HomeBookLayout({Key? key}) : super(key: key);
@@ -21,11 +18,11 @@ class _HomeBookLayoutState extends State<HomeBookLayout> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             'Pocket Books',
             style: TextStyle(fontSize: 21, fontWeight: FontWeight.w600),
           ),
-          SizedBox(height: 12),
+          const SizedBox(height: 12),
           Expanded(
             child: StaggeredGrid.count(
               crossAxisCount: 4,
@@ -40,17 +37,18 @@ class _HomeBookLayoutState extends State<HomeBookLayout> {
                       Navigator.pushNamed(
                         context,
                         RouteNames.detailBook,
-                        arguments: 'https://is3.cloudhost.id/beceran-dev-nti/coba/5_6289755545138104005-11-28.pdf',
+                        arguments:
+                            'https://is3.cloudhost.id/beceran-dev-nti/coba/books/2.%20Chapter%201%20-%20Business%20Meeting.pdf',
                       );
                     },
                     child: Container(
                       width: double.infinity,
                       height: double.infinity,
-                      padding: EdgeInsets.all(12),
+                      padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(5),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           image: CachedNetworkImageProvider(
                             'https://img.freepik.com/free-photo/aerial-view-business-team_53876-124515.jpg',
                           ),
@@ -61,7 +59,7 @@ class _HomeBookLayoutState extends State<HomeBookLayout> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Text(
+                          const Text(
                             'Business Meeting',
                             style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
                           )
@@ -78,17 +76,18 @@ class _HomeBookLayoutState extends State<HomeBookLayout> {
                       Navigator.pushNamed(
                         context,
                         RouteNames.detailBook,
-                        arguments: 'https://is3.cloudhost.id/beceran-dev-nti/coba/5_6289755545138104005-29-43.pdf',
+                        arguments:
+                            'https://is3.cloudhost.id/beceran-dev-nti/coba/books/3.%20Chapter%202%20-%20Telephoning.pdf',
                       );
                     },
                     child: Container(
                       width: double.infinity,
                       height: double.infinity,
-                      padding: EdgeInsets.all(12),
+                      padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(5),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           image: CachedNetworkImageProvider(
                             'https://www.vads.co.id/media/2962/copy-of-vads-indonesia-kenali-tanggung-jawab-dan-tugas-call-center.jpg',
                           ),
@@ -99,7 +98,7 @@ class _HomeBookLayoutState extends State<HomeBookLayout> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Text(
+                          const Text(
                             'Telephoning',
                             style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
                           )
@@ -116,17 +115,18 @@ class _HomeBookLayoutState extends State<HomeBookLayout> {
                         Navigator.pushNamed(
                           context,
                           RouteNames.detailBook,
-                          arguments: 'https://is3.cloudhost.id/beceran-dev-nti/coba/5_6289755545138104005-4-10.pdf',
+                          arguments:
+                              'https://is3.cloudhost.id/beceran-dev-nti/coba/books/4.%20Chapter%203%20-%20Setting%20Up%20A%20Business%201.pdf',
                         );
                       },
                       child: Container(
                         width: double.infinity,
                         height: double.infinity,
-                        padding: EdgeInsets.all(12),
+                        padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(5),
-                          image: DecorationImage(
+                          image: const DecorationImage(
                             image: CachedNetworkImageProvider(
                               'https://asset-a.grid.id/crop/0x0:0x0/700x0/photo/2021/06/03/wwdc-2019-kenalkan-watchos-6jpg-20210603013028.jpg',
                             ),
@@ -137,7 +137,7 @@ class _HomeBookLayoutState extends State<HomeBookLayout> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            Text(
+                            const Text(
                               'Setting Up A Business 1',
                               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
                             )
@@ -153,17 +153,18 @@ class _HomeBookLayoutState extends State<HomeBookLayout> {
                       Navigator.pushNamed(
                         context,
                         RouteNames.detailBook,
-                        arguments: 'https://is3.cloudhost.id/beceran-dev-nti/coba/5_6289755545138104005-44-64.pdf',
+                        arguments:
+                            'https://is3.cloudhost.id/beceran-dev-nti/coba/books/5.%20Chapter%204-%20Setting%20Up%20A%20Business%202.pdf',
                       );
                     },
                     child: Container(
                       width: double.infinity,
                       height: double.infinity,
-                      padding: EdgeInsets.all(12),
+                      padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(5),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           image: CachedNetworkImageProvider(
                             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpruQqlB9EXuOSRQaAlDHKpO04Qjyh-umHVA&usqp=CA',
                           ),

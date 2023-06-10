@@ -20,9 +20,9 @@ class _HomePageState extends State<HomePage> {
   int currentPage = 0;
 
   final layouts = [
-    HomeBookLayout(),
-    HomeAudioLayout(),
-    HomeVideoLayout(),
+    const HomeBookLayout(),
+    const HomeAudioLayout(),
+    const HomeVideoLayout(),
   ];
 
   final _key = GlobalKey<ScaffoldState>();
@@ -64,9 +64,9 @@ class _HomePageState extends State<HomePage> {
                   },
                   child: Row(
                     children: [
-                      Icon(CupertinoIcons.info_circle),
-                      SizedBox(width: 12),
-                      Text(
+                      const Icon(CupertinoIcons.info_circle),
+                      const SizedBox(width: 12),
+                      const Text(
                         'About Us',
                         style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
                       ),
@@ -86,9 +86,9 @@ class _HomePageState extends State<HomePage> {
           onPressed: () {
             _key.currentState!.openDrawer();
           },
-          icon: Icon(Icons.menu, color: Colors.black),
+          icon: const Icon(Icons.menu, color: Colors.black),
         ),
-        title: Text(
+        title: const Text(
           'Pocket Book',
           style: TextStyle(color: Colors.black),
         ),
@@ -98,14 +98,12 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentPage,
         onTap: (page) {
-          setState(() {
-            currentPage = page;
-          });
+          setState(() => currentPage = page);
         },
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Book'),
-          BottomNavigationBarItem(icon: Icon(Icons.audiotrack_rounded), label: 'Audio'),
-          BottomNavigationBarItem(icon: Icon(Icons.video_library_rounded), label: 'Video'),
+          const BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Book'),
+          const BottomNavigationBarItem(icon: Icon(Icons.audiotrack_rounded), label: 'Audio'),
+          const BottomNavigationBarItem(icon: Icon(Icons.video_library_rounded), label: 'Video'),
         ],
       ),
     );

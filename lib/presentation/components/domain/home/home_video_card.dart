@@ -22,15 +22,15 @@ class HomeVideoCard extends StatelessWidget {
         );
       },
       child: Container(
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           bottom: 18,
         ),
         width: double.infinity,
         height: 200,
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          image: DecorationImage(
+          image: const DecorationImage(
             image: CachedNetworkImageProvider(
               'https://www.ipsos.com/sites/default/files/ct/news_and_polls/2021-07/man-at-work-unhappy.jpg',
             ),
@@ -49,7 +49,7 @@ class HomeVideoCard extends StatelessWidget {
             // ),
             Text(
               model?.videoTitle ?? '-',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600, color: Colors.white),
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w600, color: Colors.white),
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               softWrap: true,
@@ -64,20 +64,20 @@ class HomeVideoCard extends StatelessWidget {
                   width: 40,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       image: CachedNetworkImageProvider(
-                        'https://psdkukediri.polinema.ac.id/wp-content/uploads/2020/06/LOGO-POLINEMA-transparent-3.png',
+                        'https://i0.wp.com/www.hpi.or.id/wp-content/uploads/2021/08/Logo-Polinema.png?ssl=1',
                       ),
                       fit: BoxFit.cover,
                     ),
                   ),
                 ),
-                SizedBox(width: 8),
+                const SizedBox(width: 8),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('English Lecture Team', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
-                    Text('State Polytechnic Malang', style: TextStyle(color: Colors.white)),
+                    const Text('English Lecture Team', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
+                    const Text('State Polytechnic Malang', style: TextStyle(color: Colors.white)),
                   ],
                 )
               ],

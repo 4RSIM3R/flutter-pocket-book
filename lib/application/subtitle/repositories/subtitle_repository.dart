@@ -7,9 +7,9 @@ class SubtitleRepository {
 
   SubtitleRepository() {
     dio = Dio(BaseOptions(
-      connectTimeout: 60 * 1000,
-      sendTimeout: 60 * 1000,
-      receiveTimeout: 60 * 1000,
+      connectTimeout: const Duration(milliseconds: 60 * 1000),
+      sendTimeout: const Duration(milliseconds: 60 * 1000),
+      receiveTimeout: const Duration(milliseconds: 60 * 1000),
     ));
   }
 

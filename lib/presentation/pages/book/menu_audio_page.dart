@@ -23,9 +23,9 @@ class MenuAudioPage extends StatelessWidget {
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
         ),
-        title: Text(
+        title: const Text(
           'Detail Audio',
           style: TextStyle(color: Colors.black),
         ),
@@ -33,7 +33,7 @@ class MenuAudioPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(18),
+          padding: const EdgeInsets.all(18),
           child: Column(
             children: payload
                 .map(
