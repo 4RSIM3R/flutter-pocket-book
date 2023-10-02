@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:lottie/lottie.dart';
 import 'package:pocket_books/application/book/bloc/player_listener.dart';
-import 'package:pocket_books/application/utils/application_constant.dart';
 import 'package:pocket_books/model/audio_model.dart';
 import 'package:shimmer/shimmer.dart';
 
@@ -113,9 +112,11 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
           currentIndex += 1;
         });
         if (currentIndex % 5 == 0) {
-          controller.animateTo((35.0 * currentIndex), duration: Duration(milliseconds: 250), curve: Curves.linear);
+          controller.animateTo((35.0 * currentIndex),
+              duration: const Duration(milliseconds: 250), curve: Curves.linear);
         } else {
-          controller.animateTo((30.0 * currentIndex), duration: Duration(milliseconds: 250), curve: Curves.linear);
+          controller.animateTo((30.0 * currentIndex),
+              duration: const Duration(milliseconds: 250), curve: Curves.linear);
         }
       }
     }
@@ -139,9 +140,9 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: Icon(Icons.arrow_back, color: Colors.black),
+              icon: const Icon(Icons.arrow_back, color: Colors.black),
             ),
-            title: Text(widget.model.title, style: TextStyle(color: Colors.black)),
+            title: Text(widget.model.title, style: const TextStyle(color: Colors.black)),
             centerTitle: true,
           ),
           body: Padding(
@@ -154,10 +155,10 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
                     builder: (context, state) {
                       if (state.runtimeType == SubtitleLoading) {
                         return AnimatedContainer(
-                          duration: Duration(seconds: 1),
+                          duration: const Duration(seconds: 1),
                           height: MediaQuery.of(context).size.height / 3,
                           width: double.infinity,
-                          padding: EdgeInsets.all(18),
+                          padding: const EdgeInsets.all(18),
                           decoration: BoxDecoration(
                             color: Colors.blueAccent,
                             borderRadius: BorderRadius.circular(10),
@@ -168,7 +169,7 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
                                 baseColor: Colors.grey[200]!.withOpacity(0.4),
                                 highlightColor: Colors.white.withOpacity(0.5),
                                 child: Container(
-                                  margin: EdgeInsets.only(bottom: 12),
+                                  margin: const EdgeInsets.only(bottom: 12),
                                   width: double.infinity,
                                   height: 35,
                                   decoration: BoxDecoration(
@@ -181,7 +182,7 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
                                 baseColor: Colors.grey[200]!.withOpacity(0.4),
                                 highlightColor: Colors.white.withOpacity(0.5),
                                 child: Container(
-                                  margin: EdgeInsets.only(bottom: 12),
+                                  margin: const EdgeInsets.only(bottom: 12),
                                   width: double.infinity,
                                   height: 35,
                                   decoration: BoxDecoration(
@@ -194,7 +195,7 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
                                 baseColor: Colors.grey[200]!.withOpacity(0.4),
                                 highlightColor: Colors.white.withOpacity(0.5),
                                 child: Container(
-                                  margin: EdgeInsets.only(bottom: 12),
+                                  margin: const EdgeInsets.only(bottom: 12),
                                   width: double.infinity,
                                   height: 35,
                                   decoration: BoxDecoration(
@@ -208,7 +209,7 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
                         );
                       } else if (state.runtimeType == SubtitleFailure) {
                         return Center(
-                          child: Container(
+                          child: SizedBox(
                             height: MediaQuery.of(context).size.height / 3,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -219,8 +220,8 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
                                   width: 225,
                                   fit: BoxFit.cover,
                                 ),
-                                SizedBox(height: 12),
-                                Text(
+                                const SizedBox(height: 12),
+                                const Text(
                                   'Error Message Here',
                                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
                                 )
@@ -237,7 +238,7 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
                             color: Colors.blue,
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          padding: EdgeInsets.all(18),
+                          padding: const EdgeInsets.all(18),
                           child: SingleChildScrollView(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -245,7 +246,7 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
                                   .map(
                                     (e) => Text(
                                       e.text,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         fontSize: 18,
                                         fontWeight: FontWeight.w600,
                                         color: Colors.white,
@@ -264,12 +265,12 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height: 64),
+                      const SizedBox(height: 64),
                       Text(
                         widget.model.title,
-                        style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+                        style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
                       ),
-                      SizedBox(height: 24),
+                      const SizedBox(height: 24),
                       ValueListenableBuilder<ProgressBarState>(
                         valueListenable: playerListener.progressNotifier,
                         builder: (context, value, child) {
@@ -287,15 +288,15 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
                           );
                         },
                       ),
-                      SizedBox(height: 24),
+                      const SizedBox(height: 24),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           IconButton(
                             onPressed: () {},
-                            icon: Icon(Icons.skip_previous, color: Colors.black, size: 36),
+                            icon: const Icon(Icons.skip_previous, color: Colors.black, size: 36),
                           ),
-                          SizedBox(width: 24),
+                          const SizedBox(width: 24),
                           ValueListenableBuilder<PlayButtonState>(
                             valueListenable: playerListener.playButtonNotifier,
                             builder: (context, value, child) {
@@ -307,8 +308,8 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
                                     color: Colors.blue,
                                     borderRadius: BorderRadius.circular(30),
                                   ),
-                                  child: Center(
-                                    child: Container(
+                                  child: const Center(
+                                    child: SizedBox(
                                       height: 30,
                                       width: 30,
                                       child: CircularProgressIndicator(color: Colors.white),
@@ -319,7 +320,7 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
                                 return BlocBuilder<SubtitleBloc, SubtitleState>(
                                   builder: (context, state) {
                                     if (state.runtimeType == SubtitleSuccess) {
-                                      final payload = (state as SubtitleSuccess).payload;
+                                      // final payload = (state as SubtitleSuccess).payload;
                                       return Container(
                                         height: 60,
                                         width: 60,
@@ -331,7 +332,7 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
                                           onPressed: () {
                                             audioPlayer.play();
                                           },
-                                          icon: Icon(Icons.play_arrow, color: Colors.white, size: 36),
+                                          icon: const Icon(Icons.play_arrow, color: Colors.white, size: 36),
                                         ),
                                       );
                                     } else {
@@ -343,7 +344,7 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
                                 return BlocBuilder<SubtitleBloc, SubtitleState>(
                                   builder: (context, state) {
                                     if (state.runtimeType == SubtitleSuccess) {
-                                      final payload = (state as SubtitleSuccess).payload;
+                                      // final payload = (state as SubtitleSuccess).payload;
                                       return Container(
                                         height: 60,
                                         width: 60,
@@ -355,7 +356,7 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
                                           onPressed: () {
                                             audioPlayer.pause();
                                           },
-                                          icon: Icon(Icons.pause, color: Colors.white, size: 36),
+                                          icon: const Icon(Icons.pause, color: Colors.white, size: 36),
                                         ),
                                       );
                                     } else {
@@ -366,8 +367,8 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
                               }
                             },
                           ),
-                          SizedBox(width: 24),
-                          IconButton(onPressed: () {}, icon: Icon(Icons.skip_next, color: Colors.black, size: 36))
+                          const SizedBox(width: 24),
+                          IconButton(onPressed: () {}, icon: const Icon(Icons.skip_next, color: Colors.black, size: 36))
                         ],
                       )
                     ],

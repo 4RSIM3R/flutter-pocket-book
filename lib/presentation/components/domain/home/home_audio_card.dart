@@ -2,8 +2,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:pocket_books/model/audio_model.dart';
 
-import '../../../utils/route_utils.dart';
-
 class HomeAudioCard extends StatelessWidget {
   const HomeAudioCard({
     Key? key,
@@ -54,7 +52,7 @@ class HomeAudioCard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Text(
                     'English Lecture Team State Polytechnic Malang',
                     style: TextStyle(color: Colors.grey[500], fontSize: 14),

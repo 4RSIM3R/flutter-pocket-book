@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:pocket_books/application/utils/application_constant.dart';
 import 'package:pocket_books/model/video_model.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -67,8 +66,8 @@ class _DetailVideoPageState extends State<DetailVideoPage> {
                   onPressed: () {
                     Navigator.pop(context);
                   },
-                  icon: Icon(Icons.arrow_back, color: Colors.black)),
-              title: Text(widget.model?.videoTitle ?? '-', style: TextStyle(color: Colors.black)),
+                  icon: const Icon(Icons.arrow_back, color: Colors.black)),
+              title: Text(widget.model?.videoTitle ?? '-', style: const TextStyle(color: Colors.black)),
               centerTitle: true,
             ),
             body: Column(
@@ -88,10 +87,10 @@ class _DetailVideoPageState extends State<DetailVideoPage> {
                     return player;
                   },
                 ),
-                SizedBox(height: 8),
+                const SizedBox(height: 8),
                 Expanded(
                   child: Padding(
-                    padding: EdgeInsets.all(12),
+                    padding: const EdgeInsets.all(12),
                     child: SingleChildScrollView(
                       child: Column(
                         children: [
@@ -101,7 +100,7 @@ class _DetailVideoPageState extends State<DetailVideoPage> {
                               Expanded(
                                 child: Text(
                                   widget.model?.videoTitle ?? '-',
-                                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                                  style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   softWrap: true,
@@ -111,11 +110,11 @@ class _DetailVideoPageState extends State<DetailVideoPage> {
                                 onPressed: () {
                                   Share.share(widget.model!.videoUrl);
                                 },
-                                icon: Icon(Icons.share),
+                                icon: const Icon(Icons.share),
                               )
                             ],
                           ),
-                          SizedBox(height: 8),
+                          const SizedBox(height: 8),
                           Divider(color: Colors.grey[400]),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -126,7 +125,7 @@ class _DetailVideoPageState extends State<DetailVideoPage> {
                                 width: 40,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
-                                  image: DecorationImage(
+                                  image: const DecorationImage(
                                     image: CachedNetworkImageProvider(
                                       'https://img.freepik.com/free-vector/digital-presentation-abstract-illustration_335657-4996.jpg',
                                     ),
@@ -134,8 +133,8 @@ class _DetailVideoPageState extends State<DetailVideoPage> {
                                   ),
                                 ),
                               ),
-                              SizedBox(width: 12),
-                              Column(
+                              const SizedBox(width: 12),
+                              const Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text('English Lecture Team', style: TextStyle(fontWeight: FontWeight.w600)),
@@ -145,7 +144,7 @@ class _DetailVideoPageState extends State<DetailVideoPage> {
                             ],
                           ),
                           Divider(color: Colors.grey[400]),
-                          SizedBox(height: 8),
+                          const SizedBox(height: 8),
                           Text(widget.model?.videoDescription ?? '-'),
                         ],
                       ),
@@ -168,7 +167,7 @@ class _DetailVideoPageState extends State<DetailVideoPage> {
                               color: Colors.blue,
                               borderRadius: BorderRadius.circular(5),
                             ),
-                            child: Center(
+                            child: const Center(
                               child: Text(
                                 'Follow Up Question',
                                 style: TextStyle(

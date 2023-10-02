@@ -4,7 +4,6 @@ import 'package:pocket_books/model/video_model.dart';
 import 'package:pocket_books/presentation/pages/book/detail_audio_page.dart';
 import 'package:pocket_books/presentation/pages/book/detail_book_page.dart';
 import 'package:pocket_books/presentation/pages/book/detail_video_page.dart';
-import 'package:pocket_books/presentation/pages/book/listen_book_page.dart';
 import 'package:pocket_books/presentation/pages/book/menu_audio_page.dart';
 import 'package:pocket_books/presentation/pages/book/spell_checker_page.dart';
 import 'package:pocket_books/presentation/pages/common/onboarding_page.dart';

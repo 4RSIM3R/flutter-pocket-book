@@ -38,7 +38,7 @@ class _HomeBookLayoutState extends State<HomeBookLayout> {
                         context,
                         RouteNames.detailBook,
                         arguments:
-                            'https://is3.cloudhost.id/beceran-dev-nti/coba/books/2.%20Chapter%201%20-%20Business%20Meeting.pdf',
+                            'https://wwteigwmakerpnbvyhqn.supabase.co/storage/v1/object/public/flutter_1/Business%20Meeting%20in%20A%20Nutshell-Topic%201.pdf',
                       );
                     },
                     child: Container(
@@ -55,11 +55,11 @@ class _HomeBookLayoutState extends State<HomeBookLayout> {
                           fit: BoxFit.cover,
                         ),
                       ),
-                      child: Column(
+                      child: const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          const Text(
+                          Text(
                             'Business Meeting',
                             style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
                           )
@@ -77,7 +77,7 @@ class _HomeBookLayoutState extends State<HomeBookLayout> {
                         context,
                         RouteNames.detailBook,
                         arguments:
-                            'https://is3.cloudhost.id/beceran-dev-nti/coba/books/3.%20Chapter%202%20-%20Telephoning.pdf',
+                            'https://wwteigwmakerpnbvyhqn.supabase.co/storage/v1/object/public/flutter_1/Business%20Meeting%20in%20A%20Nutshell-Topic%202.pdf',
                       );
                     },
                     child: Container(
@@ -94,11 +94,11 @@ class _HomeBookLayoutState extends State<HomeBookLayout> {
                           fit: BoxFit.cover,
                         ),
                       ),
-                      child: Column(
+                      child: const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          const Text(
+                          Text(
                             'Telephoning',
                             style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
                           )
@@ -116,7 +116,7 @@ class _HomeBookLayoutState extends State<HomeBookLayout> {
                           context,
                           RouteNames.detailBook,
                           arguments:
-                              'https://is3.cloudhost.id/beceran-dev-nti/coba/books/4.%20Chapter%203%20-%20Setting%20Up%20A%20Business%201.pdf',
+                              'https://wwteigwmakerpnbvyhqn.supabase.co/storage/v1/object/public/flutter_1/Business%20Meeting%20in%20A%20Nutshell-Topic%203.pdf',
                         );
                       },
                       child: Container(
@@ -133,11 +133,11 @@ class _HomeBookLayoutState extends State<HomeBookLayout> {
                             fit: BoxFit.cover,
                           ),
                         ),
-                        child: Column(
+                        child: const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            const Text(
+                            Text(
                               'Setting Up A Business 1',
                               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
                             )
@@ -154,7 +154,7 @@ class _HomeBookLayoutState extends State<HomeBookLayout> {
                         context,
                         RouteNames.detailBook,
                         arguments:
-                            'https://is3.cloudhost.id/beceran-dev-nti/coba/books/5.%20Chapter%204-%20Setting%20Up%20A%20Business%202.pdf',
+                            'https://wwteigwmakerpnbvyhqn.supabase.co/storage/v1/object/public/flutter_1/Business%20Meeting%20in%20A%20Nutshell-Topic%205.pdf',
                       );
                     },
                     child: Container(
@@ -171,7 +171,7 @@ class _HomeBookLayoutState extends State<HomeBookLayout> {
                           fit: BoxFit.cover,
                         ),
                       ),
-                      child: Column(
+                      child: const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [

@@ -15,9 +15,10 @@ class MyApp extends StatelessWidget {
       title: 'Pocket Book',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        useMaterial3: true,
         primarySwatch: Colors.blue,
         textTheme: GoogleFonts.dmSansTextTheme(
-          Theme.of(context).textTheme, 
+          Theme.of(context).textTheme,
         ),
       ),
       onGenerateRoute: RouteUtils.onGenerateRoute,

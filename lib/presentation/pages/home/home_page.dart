@@ -1,13 +1,9 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:pocket_books/presentation/components/domain/home/home_book_card.dart';
 import 'package:pocket_books/presentation/layouts/home/home_audio_layout.dart';
 import 'package:pocket_books/presentation/layouts/home/home_book_layout.dart';
 import 'package:pocket_books/presentation/layouts/home/home_video_layout.dart';
 import 'package:pocket_books/presentation/utils/route_utils.dart';
-
-import '../../utils/ui_utils.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -62,11 +58,11 @@ class _HomePageState extends State<HomePage> {
                   onTap: () {
                     Navigator.pushNamed(context, RouteNames.aboutUs);
                   },
-                  child: Row(
+                  child: const Row(
                     children: [
-                      const Icon(CupertinoIcons.info_circle),
-                      const SizedBox(width: 12),
-                      const Text(
+                      Icon(CupertinoIcons.info_circle),
+                      SizedBox(width: 12),
+                      Text(
                         'About Us',
                         style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
                       ),
@@ -100,10 +96,10 @@ class _HomePageState extends State<HomePage> {
         onTap: (page) {
           setState(() => currentPage = page);
         },
-        items: [
-          const BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Book'),
-          const BottomNavigationBarItem(icon: Icon(Icons.audiotrack_rounded), label: 'Audio'),
-          const BottomNavigationBarItem(icon: Icon(Icons.video_library_rounded), label: 'Video'),
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Book'),
+          BottomNavigationBarItem(icon: Icon(Icons.audiotrack_rounded), label: 'Audio'),
+          BottomNavigationBarItem(icon: Icon(Icons.video_library_rounded), label: 'Video'),
         ],
       ),
     );
