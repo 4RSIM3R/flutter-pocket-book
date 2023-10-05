@@ -13,22 +13,22 @@ final listBook = [
   {
     "title": "Business Meeting",
     "url": "https://api.kontenbase.com/upload/file/628cf4cbdb20c52857fb0b75/jVHCcPtB/WKChnMQe/Topic%201.pdf",
-    "author": "English Lecture Team State Polytechnic Malang",
+    "author": "Business Meeting Course Team",
   },
   {
     "title": "Telephoning",
     "url": "https://api.kontenbase.com/upload/file/628cf4cbdb20c52857fb0b75/jVHCcPtB/AXgNDgOw/Topic%202.pdf",
-    "author": "English Lecture Team State Polytechnic Malang",
+    "author": "Business Meeting Course Team",
   },
   {
     "title": "Setting Up Business 1",
     "url": "https://api.kontenbase.com/upload/file/628cf4cbdb20c52857fb0b75/jVHCcPtB/RYRQHpDP/Topic%203.pdf",
-    "author": "English Lecture Team State Polytechnic Malang",
+    "author": "Business Meeting Course Team",
   },
   {
     "title": "Setting Up Business 2",
     "url": "https://api.kontenbase.com/upload/file/628cf4cbdb20c52857fb0b75/jVHCcPtB/aIXTEJcK/Topic%204.pdf",
-    "author": "English Lecture Team State Polytechnic Malang",
+    "author": "Business Meeting Course Team",
   }
 ];
 

@@ -54,7 +54,7 @@ class HomeAudioCard extends StatelessWidget {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    'English Lecture Team State Polytechnic Malang',
+                    'Business Meeting Course Team',
                     style: TextStyle(color: Colors.grey[500], fontSize: 14),
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,

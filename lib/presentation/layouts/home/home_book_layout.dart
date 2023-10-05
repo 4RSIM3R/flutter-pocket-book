@@ -1,6 +1,5 @@
-import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:pocket_books/presentation/utils/route_utils.dart';
 
 class HomeBookLayout extends StatefulWidget {
@@ -22,167 +21,74 @@ class _HomeBookLayoutState extends State<HomeBookLayout> {
             'Pocket Books',
             style: TextStyle(fontSize: 21, fontWeight: FontWeight.w600),
           ),
-          const SizedBox(height: 12),
-          Expanded(
-            child: StaggeredGrid.count(
-              crossAxisCount: 4,
-              mainAxisSpacing: 8,
-              crossAxisSpacing: 8,
+          const SizedBox(height: 16),
+          InkWell(
+            onTap: () {
+              Navigator.pushNamed(context, RouteNames.listBook);
+            },
+            child: Row(
               children: [
-                StaggeredGridTile.count(
-                  crossAxisCellCount: 2,
-                  mainAxisCellCount: 3,
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.pushNamed(
-                        context,
-                        RouteNames.detailBook,
-                        arguments:
-                            'https://wwteigwmakerpnbvyhqn.supabase.co/storage/v1/object/public/flutter_1/Business%20Meeting%20in%20A%20Nutshell-Topic%201.pdf',
-                      );
-                    },
-                    child: Container(
-                      width: double.infinity,
-                      height: double.infinity,
-                      padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(5),
-                        image: const DecorationImage(
-                          image: CachedNetworkImageProvider(
-                            'https://img.freepik.com/free-photo/aerial-view-business-team_53876-124515.jpg',
-                          ),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      child: const Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text(
-                            'Business Meeting',
-                            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
-                          )
-                        ],
-                      ),
-                    ),
+                Container(
+                  height: 45,
+                  width: 45,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: const Center(
+                    child: Icon(CupertinoIcons.folder, color: Colors.white),
                   ),
                 ),
-                StaggeredGridTile.count(
-                  crossAxisCellCount: 2,
-                  mainAxisCellCount: 2,
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.pushNamed(
-                        context,
-                        RouteNames.detailBook,
-                        arguments:
-                            'https://wwteigwmakerpnbvyhqn.supabase.co/storage/v1/object/public/flutter_1/Business%20Meeting%20in%20A%20Nutshell-Topic%202.pdf',
-                      );
-                    },
-                    child: Container(
-                      width: double.infinity,
-                      height: double.infinity,
-                      padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(5),
-                        image: const DecorationImage(
-                          image: CachedNetworkImageProvider(
-                            'https://www.vads.co.id/media/2962/copy-of-vads-indonesia-kenali-tanggung-jawab-dan-tugas-call-center.jpg',
-                          ),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      child: const Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text(
-                            'Telephoning',
-                            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
-                          )
-                        ],
-                      ),
+                const SizedBox(width: 8),
+                const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Chapter 1',
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                     ),
+                    SizedBox(width: 4),
+                    Text(
+                      'Description',
+                      style: TextStyle(fontSize: 14, color: Colors.grey),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 16),
+          InkWell(
+            onTap: () {
+              Navigator.pushNamed(context, RouteNames.listBook);
+            },
+            child: Row(
+              children: [
+                Container(
+                  height: 45,
+                  width: 45,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: const Center(
+                    child: Icon(CupertinoIcons.folder, color: Colors.white),
                   ),
                 ),
-                StaggeredGridTile.count(
-                    crossAxisCellCount: 2,
-                    mainAxisCellCount: 3,
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.pushNamed(
-                          context,
-                          RouteNames.detailBook,
-                          arguments:
-                              'https://wwteigwmakerpnbvyhqn.supabase.co/storage/v1/object/public/flutter_1/Business%20Meeting%20in%20A%20Nutshell-Topic%203.pdf',
-                        );
-                      },
-                      child: Container(
-                        width: double.infinity,
-                        height: double.infinity,
-                        padding: const EdgeInsets.all(12),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(5),
-                          image: const DecorationImage(
-                            image: CachedNetworkImageProvider(
-                              'https://asset-a.grid.id/crop/0x0:0x0/700x0/photo/2021/06/03/wwdc-2019-kenalkan-watchos-6jpg-20210603013028.jpg',
-                            ),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        child: const Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Text(
-                              'Setting Up A Business 1',
-                              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
-                            )
-                          ],
-                        ),
-                      ),
-                    )),
-                StaggeredGridTile.count(
-                  crossAxisCellCount: 2,
-                  mainAxisCellCount: 2,
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.pushNamed(
-                        context,
-                        RouteNames.detailBook,
-                        arguments:
-                            'https://wwteigwmakerpnbvyhqn.supabase.co/storage/v1/object/public/flutter_1/Business%20Meeting%20in%20A%20Nutshell-Topic%205.pdf',
-                      );
-                    },
-                    child: Container(
-                      width: double.infinity,
-                      height: double.infinity,
-                      padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(5),
-                        image: const DecorationImage(
-                          image: CachedNetworkImageProvider(
-                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpruQqlB9EXuOSRQaAlDHKpO04Qjyh-umHVA&usqp=CA',
-                          ),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      child: const Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text(
-                            'Setting Up A Business 2',
-                            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
-                          )
-                        ],
-                      ),
+                const SizedBox(width: 8),
+                const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Chapter 2',
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                     ),
-                  ),
+                    SizedBox(width: 4),
+                    Text(
+                      'Description',
+                      style: TextStyle(fontSize: 14, color: Colors.grey),
+                    ),
+                  ],
                 ),
               ],
             ),

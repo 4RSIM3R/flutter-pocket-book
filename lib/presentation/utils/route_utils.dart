@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:pocket_books/model/audio_model.dart';
 import 'package:pocket_books/model/video_model.dart';
-import 'package:pocket_books/presentation/pages/book/detail_audio_page.dart';
+import 'package:pocket_books/presentation/pages/audio/detail_audio_page.dart';
+import 'package:pocket_books/presentation/pages/audio/menu_audio_page.dart';
 import 'package:pocket_books/presentation/pages/book/detail_book_page.dart';
-import 'package:pocket_books/presentation/pages/book/detail_video_page.dart';
-import 'package:pocket_books/presentation/pages/book/menu_audio_page.dart';
-import 'package:pocket_books/presentation/pages/book/spell_checker_page.dart';
+import 'package:pocket_books/presentation/pages/book/list_book_page.dart';
 import 'package:pocket_books/presentation/pages/common/onboarding_page.dart';
 import 'package:pocket_books/presentation/pages/common/splash_page.dart';
 import 'package:pocket_books/presentation/pages/home/home_page.dart';
+import 'package:pocket_books/presentation/pages/spell/spell_checker_page.dart';
+import 'package:pocket_books/presentation/pages/videos/detail_video_page.dart';
 
 import '../pages/common/about_us_page.dart';
 
@@ -19,6 +20,7 @@ class RouteNames {
   static const onboarding = '/onboarding';
   static const home = '/home';
   static const spellChecker = '/spell-checker';
+  static const listBook = '/list-book';
   static const detailBook = '/detail-book';
   static const listenBook = '/listen-book';
   static const detailVideo = '/detail-video';
@@ -44,6 +46,7 @@ class RouteNames {
     },
     aboutUs: (args) => const AboutUsPage(),
     menuAudio: (args) => MenuAudioPage(payload: (args as List<Map<String, dynamic>>?) ?? []),
+    listBook: (args) => const ListBookPage(),
   };
 }
 
