@@ -92,6 +92,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: layouts[currentPage],
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.blue,
         currentIndex: currentPage,
         onTap: (page) {
           setState(() => currentPage = page);

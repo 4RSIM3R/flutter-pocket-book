@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pocket_books/model/audio_model.dart';
+import 'package:pocket_books/model/book_props.dart';
 import 'package:pocket_books/model/video_model.dart';
 import 'package:pocket_books/presentation/pages/audio/detail_audio_page.dart';
 import 'package:pocket_books/presentation/pages/audio/menu_audio_page.dart';
@@ -46,7 +47,7 @@ class RouteNames {
     },
     aboutUs: (args) => const AboutUsPage(),
     menuAudio: (args) => MenuAudioPage(payload: (args as List<Map<String, dynamic>>?) ?? []),
-    listBook: (args) => const ListBookPage(),
+    listBook: (args) => ListBookPage(props: args as BookProps),
   };
 }
 

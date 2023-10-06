@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         primarySwatch: Colors.blue,
+        primaryColor: Colors.blue,
         textTheme: GoogleFonts.dmSansTextTheme(
           Theme.of(context).textTheme,
         ),
