@@ -26,47 +26,49 @@ class ListBookPage extends StatelessWidget {
             ),
             const SizedBox(height: 12),
             Expanded(
-              child: StaggeredGrid.count(
-                crossAxisCount: 4,
-                mainAxisSpacing: 8,
-                crossAxisSpacing: 8,
-                children: props.books
-                    .map(
-                      (e) => StaggeredGridTile.count(
-                        crossAxisCellCount: 2,
-                        mainAxisCellCount: 2,
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.pushNamed(context, RouteNames.detailBook, arguments: e.url);
-                          },
-                          child: Container(
-                            width: double.infinity,
-                            height: double.infinity,
-                            padding: const EdgeInsets.all(12),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(5),
-                              image: DecorationImage(
-                                image: CachedNetworkImageProvider(e.thumbnail),
-                                fit: BoxFit.cover,
+              child: SingleChildScrollView(
+                child: StaggeredGrid.count(
+                  crossAxisCount: 4,
+                  mainAxisSpacing: 8,
+                  crossAxisSpacing: 8,
+                  children: props.books
+                      .map(
+                        (e) => StaggeredGridTile.count(
+                          crossAxisCellCount: 2,
+                          mainAxisCellCount: 2,
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.pushNamed(context, RouteNames.detailBook, arguments: e.url);
+                            },
+                            child: Container(
+                              width: double.infinity,
+                              height: double.infinity,
+                              padding: const EdgeInsets.all(12),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(5),
+                                image: DecorationImage(
+                                  image: CachedNetworkImageProvider(e.thumbnail),
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                Text(
-                                  e.title,
-                                  style:
-                                      const TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
-                                )
-                              ],
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Text(
+                                    e.title,
+                                    style:
+                                        const TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    )
-                    .toList(),
+                      )
+                      .toList(),
+                ),
               ),
             ),
           ],

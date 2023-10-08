@@ -73,11 +73,17 @@ class HomeVideoCard extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 8),
-                Column(
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('English Lecture Team', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
-                    const Text('State Polytechnic Malang', style: TextStyle(color: Colors.white)),
+                    Text(
+                      'Business Meeting course Team',
+                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
+                    ),
+                    Text(
+                      'State Polytechnic Malang',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ],
                 )
               ],

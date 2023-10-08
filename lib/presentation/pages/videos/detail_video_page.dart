@@ -137,7 +137,7 @@ class _DetailVideoPageState extends State<DetailVideoPage> {
                               const Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text('English Lecture Team', style: TextStyle(fontWeight: FontWeight.w600)),
+                                  Text('Business Meeting course Team', style: TextStyle(fontWeight: FontWeight.w600)),
                                   Text('State Polytechnic Malang'),
                                 ],
                               )

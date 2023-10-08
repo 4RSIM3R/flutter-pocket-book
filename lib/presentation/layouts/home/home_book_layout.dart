@@ -57,7 +57,7 @@ class _HomeBookLayoutState extends State<HomeBookLayout> {
                       ),
                       SizedBox(width: 4),
                       Text(
-                        'Description',
+                        'Short Description Here',
                         style: TextStyle(fontSize: 14, color: Colors.grey),
                       ),
                     ],
@@ -100,12 +100,12 @@ class _HomeBookLayoutState extends State<HomeBookLayout> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Chapter 2',
+                        'Book 2',
                         style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                       ),
                       SizedBox(width: 4),
                       Text(
-                        'Description',
+                        'Short Description Here',
                         style: TextStyle(fontSize: 14, color: Colors.grey),
                       ),
                     ],
