@@ -17,12 +17,12 @@ class AboutUsPage extends StatelessWidget {
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
             color: Colors.black,
           ),
         ),
-        title: Text(
+        title: const Text(
           'About Us',
           style: TextStyle(color: Colors.black),
         ),
@@ -30,52 +30,47 @@ class AboutUsPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(18),
+          padding: const EdgeInsets.all(18),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 'About This App',
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              SizedBox(height: 12),
-              Text(
-                about,
-                style: TextStyle(
-                  color: Colors.grey,
-                ),
-              ),
-              SizedBox(height: 12),
-              SizedBox(height: 12),
-              Text(
+              const SizedBox(height: 12),
+              const Text(about),
+              const SizedBox(height: 12),
+              const SizedBox(height: 12),
+              const Text(
                 'The Team',
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              SizedBox(height: 12),
+              const SizedBox(height: 12),
               Row(
                 children: [
                   Expanded(
                     child: Container(
                       width: double.infinity,
                       height: 200,
-                      padding: EdgeInsets.all(12),
+                      padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(5),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           image: CachedNetworkImageProvider(
                             'https://is3.cloudhost.id/beceran-dev-nti/coba/farida_ulfa.jpg',
                           ),
                           fit: BoxFit.cover,
                         ),
                       ),
-                      child: Column(
+                      child: const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
@@ -87,23 +82,23 @@ class AboutUsPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(width: 12),
+                  const SizedBox(width: 12),
                   Expanded(
                     child: Container(
                       width: double.infinity,
                       height: 200,
-                      padding: EdgeInsets.all(12),
+                      padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(5),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           image: CachedNetworkImageProvider(
                             'https://is3.cloudhost.id/beceran-dev-nti/coba/lia_agustina.jpeg',
                           ),
                           fit: BoxFit.cover,
                         ),
                       ),
-                      child: Column(
+                      child: const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
@@ -115,23 +110,23 @@ class AboutUsPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(width: 12),
+                  const SizedBox(width: 12),
                   Expanded(
                     child: Container(
                       width: double.infinity,
                       height: 200,
-                      padding: EdgeInsets.all(12),
+                      padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(5),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           image: CachedNetworkImageProvider(
                             'https://is3.cloudhost.id/beceran-dev-nti/coba/futuh_handoyo.jpg',
                           ),
                           fit: BoxFit.cover,
                         ),
                       ),
-                      child: Column(
+                      child: const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
@@ -145,25 +140,25 @@ class AboutUsPage extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 12),
+              const SizedBox(height: 12),
               Row(
                 children: [
                   Expanded(
                     child: Container(
                       width: double.infinity,
                       height: 200,
-                      padding: EdgeInsets.all(12),
+                      padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(5),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           image: CachedNetworkImageProvider(
                             'https://is3.cloudhost.id/beceran-dev-nti/coba/haikal.JPG',
                           ),
                           fit: BoxFit.cover,
                         ),
                       ),
-                      child: Column(
+                      child: const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
@@ -175,23 +170,23 @@ class AboutUsPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(width: 12),
+                  const SizedBox(width: 12),
                   Expanded(
                     child: Container(
                       width: double.infinity,
                       height: 200,
-                      padding: EdgeInsets.all(12),
+                      padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(5),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           image: CachedNetworkImageProvider(
                             'https://is3.cloudhost.id/beceran-dev-nti/coba/intan.jpg',
                           ),
                           fit: BoxFit.cover,
                         ),
                       ),
-                      child: Column(
+                      child: const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
@@ -203,23 +198,23 @@ class AboutUsPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(width: 12),
+                  const SizedBox(width: 12),
                   Expanded(
                     child: Container(
                       width: double.infinity,
                       height: 200,
-                      padding: EdgeInsets.all(12),
+                      padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(5),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           image: CachedNetworkImageProvider(
                             'https://st2.depositphotos.com/4196725/6756/i/600/depositphotos_67569001-stock-photo-black-wrinkled-paper-texture.jpg',
                           ),
                           fit: BoxFit.cover,
                         ),
                       ),
-                      child: Column(
+                      child: const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [

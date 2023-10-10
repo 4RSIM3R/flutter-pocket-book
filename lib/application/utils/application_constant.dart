@@ -211,5 +211,13 @@ final audios = {
   ],
 };
 
-const about =
-    "This digital pocket book is developed for the purpose of completing research in developing a digital pocket book for businessmeeting purpose. Both book and the application have been validated to meet the criteria of exxelence for students and also teacher use. The writers of the book are faculty members of Politeknik Negeri Malang with years of service, trainings, research and experiences in the teaching and learning of ESP in tertiary level, also in materials development and translations";
+const about = """
+The digital pocketbook 1.0.0 is a collaboration work of Politenik Negeri Malang faculty members of the Accounting Department and Information Technology Department, as book writers, with students of the Information Technology Department as developers. With years of service, training, research, and experience in the teaching and learning of ESP at the tertiary level, materials development, and translations as faculty members and also as highly trained students of IT, the developed application can eventually assist students in excelling their language skills in a more meaningful, autonomous and fun way. The practices given encourages awareness of sustainable development, critical thinking and also character building.
+
+Does anyone have any questions?
+Follow the project updates
+
+Lia Agustina, Farida Ulfa, et.al.
++62 812-5272-5262
+lia_alfan2d@yahoo.com
+  """;

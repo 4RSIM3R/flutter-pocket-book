@@ -57,9 +57,12 @@ class ListBookPage extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   Text(
-                                    e.title,
-                                    style:
-                                        const TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
+                                    '${props.books.indexOf(e) + 1}. ${e.title}',
+                                    style: const TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.white,
+                                    ),
                                   )
                                 ],
                               ),

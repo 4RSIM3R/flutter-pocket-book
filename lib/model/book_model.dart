@@ -39,37 +39,29 @@ const bookOne = [
 const bookTwo = [
   BookModel(
     title: 'Socializing The Product',
-    url:
-        'https://wwteigwmakerpnbvyhqn.supabase.co/storage/v1/object/public/flutter_1/Business%20Meeting%20in%20A%20Nutshell-Topic%201.pdf',
-    thumbnail:
-        'https://images.inc.com/uploaded_files/image/1920x1080/team-diagram_29756.jpg',
+    url: 'https://talknsuuxbagiqzzsknq.supabase.co/storage/v1/object/public/vedc-inventaris/socializing_product.pdf',
+    thumbnail: 'https://images.inc.com/uploaded_files/image/1920x1080/team-diagram_29756.jpg',
   ),
   BookModel(
     title: 'Problem Solving',
-    url:
-        'https://wwteigwmakerpnbvyhqn.supabase.co/storage/v1/object/public/flutter_1/Business%20Meeting%20in%20A%20Nutshell-Topic%202.pdf',
+    url: 'https://talknsuuxbagiqzzsknq.supabase.co/storage/v1/object/public/vedc-inventaris/problem_solving.pdf',
     thumbnail:
         'https://observatory.tec.mx/wp-content/uploads/2018/02/bigstock-Concept-of-problem-solving-by-23827334.jpg',
   ),
   BookModel(
     title: 'Business Ethics',
-    url:
-        'https://wwteigwmakerpnbvyhqn.supabase.co/storage/v1/object/public/flutter_1/Business%20Meeting%20in%20A%20Nutshell-Topic%203.pdf',
-    thumbnail:
-        'https://i0.wp.com/articles.connectnigeria.com/wp-content/uploads/2013/02/business-etiquette.jpg',
+    url: 'https://talknsuuxbagiqzzsknq.supabase.co/storage/v1/object/public/vedc-inventaris/debate.pdf',
+    thumbnail: 'https://i0.wp.com/articles.connectnigeria.com/wp-content/uploads/2013/02/business-etiquette.jpg',
   ),
   BookModel(
     title: 'Maturity Stage: a Product Lifecycle',
-    url:
-        'https://wwteigwmakerpnbvyhqn.supabase.co/storage/v1/object/public/flutter_1/Business%20Meeting%20in%20A%20Nutshell-Topic%204.pdf',
+    url: 'https://talknsuuxbagiqzzsknq.supabase.co/storage/v1/object/public/vedc-inventaris/maturity.pdf',
     thumbnail:
         'https://www.betterworks.com/wp-content/uploads/2021/10/10-13-2021_Blog-Scaling-Your-Startup-660x660-1.jpg',
   ),
   BookModel(
     title: 'Creating a Product Innovation',
-    url:
-        'https://wwteigwmakerpnbvyhqn.supabase.co/storage/v1/object/public/flutter_1/Business%20Meeting%20in%20A%20Nutshell-Topic%205.pdf',
-    thumbnail:
-        'https://intertradeireland.com/assets/hero/_pageOverview/Hand-holding-lightbulb.png',
+    url: 'https://talknsuuxbagiqzzsknq.supabase.co/storage/v1/object/public/vedc-inventaris/product_innovation.pdf',
+    thumbnail: 'https://intertradeireland.com/assets/hero/_pageOverview/Hand-holding-lightbulb.png',
   ),
 ];
