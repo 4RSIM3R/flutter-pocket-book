@@ -76,7 +76,10 @@ class AboutUsPage extends StatelessWidget {
                         children: [
                           Text(
                             'MRS Farida Ulfa',
-                            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
                           )
                         ],
                       ),
@@ -104,7 +107,10 @@ class AboutUsPage extends StatelessWidget {
                         children: [
                           Text(
                             'MRS Lia Agustina',
-                            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
                           )
                         ],
                       ),
@@ -132,7 +138,10 @@ class AboutUsPage extends StatelessWidget {
                         children: [
                           Text(
                             'MR Futuh Handoyo',
-                            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
                           )
                         ],
                       ),
@@ -164,7 +173,10 @@ class AboutUsPage extends StatelessWidget {
                         children: [
                           Text(
                             'Haikal',
-                            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
                           )
                         ],
                       ),
@@ -192,7 +204,10 @@ class AboutUsPage extends StatelessWidget {
                         children: [
                           Text(
                             'Intan',
-                            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
                           )
                         ],
                       ),
@@ -220,7 +235,94 @@ class AboutUsPage extends StatelessWidget {
                         children: [
                           Text(
                             'Ilzam',
-                            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 12),
+              Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      width: double.infinity,
+                      height: 200,
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(5),
+                        image: const DecorationImage(
+                          image: CachedNetworkImageProvider(
+                            'https://firebasestorage.googleapis.com/v0/b/ez-parky.appspot.com/o/foto_maul.JPG?alt=media&token=87b0efef-4461-4923-b302-ce55427259d6',
+                          ),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      child: const Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            'Maulana',
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Container(
+                      width: double.infinity,
+                      height: 200,
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                          color: Colors.transparent,
+                          borderRadius: BorderRadius.circular(5)),
+                      child: const Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            '',
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Container(
+                      width: double.infinity,
+                      height: 200,
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: Colors.transparent,
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: const Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            '',
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
                           )
                         ],
                       ),
